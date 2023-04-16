@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #000;
+}
+.loader{
+    position: relative;
+    width: 300px;
+    height: 10px;
+    border-radius: 50%;
+    background: #fff;
+    -webkit-box-reflex: below 1px linear-gradient(transparent, #005) ;
+}
+.loader:before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: linear-gradient(90deg,  #5ba7ca, #fb0094, #0000ff,
+                                         #00ff00, #ffff00, #ff0000,
+                                          #b147e2, #0ABAB5, #C4A484,
+                                           #3B3131, #1ee4b3, #c073bc,
+                                            #5C5858, #6f4fd6, #efdb45, );
+    animation: animate 30s linear infinite;
+    background-size: 500%;
+}
+.loader::after
+{
+    content: "";
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: linear-gradient(90deg,  #5ba7ca, #fb0094, #0000ff,
+                                         #00ff00, #ffff00, #ff0000,
+                                          #b147e2, #0ABAB5, #C4A484,
+                                           #3B3131, #1ee4b3, #c073bc,
+                                            #5C5858, #6f4fd6, #efdb45, );
+    animation: animate 30s linear infinite;
+    background-size: 500%;
+    filter: blur(20px);
+}
+@keyframes animate{
+    0%{
+        background-position: 0%;
+    }
+    0%{
+        background-position: 500%,0;
+    }
+}
